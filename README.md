@@ -13,8 +13,13 @@ AkondAstro is a specialized division of [AkondLab](https://www.akond.com) dedica
 - **Framework:** Astro
 - **Styling:** Tailwind CSS  
 - **Content:** Markdown-based CMS
-- **Deployment:** GitHub Pages
+- **Deployment:** Cloudflare Pages
 - **Package Manager:** npm
+
+## 🌐 Live Site
+
+**URL:** [https://akond.space](https://akond.space)  
+**Repository:** [https://github.com/AkondLab/web-akondastro](https://github.com/AkondLab/web-akondastro)
 
 ## 🛠️ Development
 
@@ -25,7 +30,7 @@ AkondAstro is a specialized division of [AkondLab](https://www.akond.com) dedica
 ### Setup
 ```bash
 # Clone repository
-git clone <repository-url>
+git clone https://github.com/AkondLab/web-akondastro.git
 cd web-akondastro
 
 # Install dependencies
@@ -107,7 +112,12 @@ order: 1
 
 ## 🚀 Deployment
 
-The site deploys automatically to GitHub Pages via GitHub Actions when pushing to the `main` branch.
+The site is deployed on **Cloudflare Pages** and automatically builds/deploys when pushing to the `main` branch.
+
+- **Live URL:** [https://akond.space](https://akond.space)
+- **Deployment:** Cloudflare Pages
+- **Build Command:** `npm run build`
+- **Output Directory:** `dist`
 
 ### Manual Deployment
 ```bash
