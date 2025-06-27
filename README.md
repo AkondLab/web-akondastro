@@ -1,47 +1,135 @@
-# Astro Starter Kit: Minimal
+# AkondAstro Website
 
-```sh
-npm create astro@latest -- --template minimal
+The official website for AkondAstro - a branch of AkondLab focused on creating software for astronomy.
+
+**Authors:** Mikołaj Kałuszyński & Claude (Anthropic)
+
+## 🌟 About
+
+AkondAstro is a specialized division of [AkondLab](https://www.akond.com) dedicated to creating innovative software solutions for astronomical research and observation. This website showcases our projects and partnerships in the astronomical software community.
+
+## 🚀 Tech Stack
+
+- **Framework:** Astro
+- **Styling:** Tailwind CSS  
+- **Content:** Markdown-based CMS
+- **Deployment:** GitHub Pages
+- **Package Manager:** npm
+
+## 🛠️ Development
+
+### Prerequisites
+- Node.js 18+ 
+- npm
+
+### Setup
+```bash
+# Clone repository
+git clone <repository-url>
+cd web-akondastro
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+### Available Commands
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+| Command | Action |
+|---------|--------|
+| `npm run dev` | Start development server at `localhost:4321` |
+| `npm run build` | Build production site to `./dist/` |
+| `npm run preview` | Preview production build locally |
+| `npm run astro check` | Run type checking |
 
-## 🚀 Project Structure
+## 📁 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
+```
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── content/           # Markdown content files
+│   │   ├── projects/      # Project descriptions
+│   │   └── partners/      # Partner information
+│   ├── pages/            # Route pages
+│   │   └── index.astro   # Homepage
+│   ├── styles/           # Global styles
+│   └── content.config.ts # Content collections schema
+├── public/
+│   └── assets/
+│       └── logos/        # Logo assets
+│           ├── brand/    # AkondAstro branding
+│           ├── projects/ # Project logos
+│           └── partners/ # Partner logos
+├── .github/
+│   └── workflows/        # GitHub Actions
+└── astro.config.mjs     # Astro configuration
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## ✏️ Content Management
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Content is managed through Markdown files with frontmatter:
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Adding/Editing Projects
+Edit files in `src/content/projects/`:
 
-## 🧞 Commands
+```yaml
+---
+title: "Project Name"
+logo: "/web-akondastro/assets/logos/projects/logo.svg"
+url: "https://project-url.com"
+order: 1
+---
 
-All commands are run from the root of the project, from a terminal:
+Project description in Markdown.
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Adding/Editing Partners
+Edit files in `src/content/partners/`:
 
-## 👀 Want to learn more?
+```yaml
+---
+title: "Organization Name"
+subtitle: "Location/Affiliation"
+logo: "/web-akondastro/assets/logos/partners/logo.svg"
+url: "https://organization-url.com"
+filter: "invert"  # optional CSS filter
+order: 1
+---
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🎨 Brand Assets
+
+- **Primary Logo:** `akondastro_logo_bright.svg` (for dark backgrounds)
+- **Alternative:** `akondastro_logo_dark.svg` (for light backgrounds)
+- **Brand Color:** `#60a5fa` (blue-400)
+- **Text Color:** `#f8fafc` (slate-50)
+
+## 🚀 Deployment
+
+The site deploys automatically to GitHub Pages via GitHub Actions when pushing to the `main` branch.
+
+### Manual Deployment
+```bash
+npm run build
+# Upload dist/ folder to your hosting provider
+```
+
+## 🔗 Related Projects
+
+- [OCM Observatory](https://ocm.camk.edu.pl) - Optical Gravitational Lensing Experiment
+- [Araucaria Project](https://araucaria.camk.edu.pl) - Observatory management systems
+- [BHTom Platform](https://bh-tom2.astrolabs.pl) - Black Hole Transient Monitor
+- [AkondLab](https://www.akond.com) - Parent company
+
+## 🤝 Partnerships
+
+We collaborate with leading astronomical institutions:
+- Nicolaus Copernicus Astronomical Center (CAMK PAN)
+- Astronomical Observatory, University of Warsaw
+- National Centre for Nuclear Research (NCBJ)
+- ASA Astrosysteme GmbH
+
+## 📄 License
+
+This project is proprietary software of AkondLab.

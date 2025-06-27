@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+/* Custom prose styling for better paragraph spacing and lists */
+.prose-project {
+  @apply text-slate-300 text-sm leading-relaxed;
+}
+
+.prose-project p {
+  @apply mb-4;
+}
+
+.prose-project p:last-child {
+  @apply mb-0;
+}
+
+.prose-project strong {
+  @apply text-blue-400 font-semibold;
+}
+
+.prose-project ul {
+  @apply mt-3 mb-4 space-y-2;
+}
+
+.prose-project li {
+  @apply relative pl-6;
+}
+
+.prose-project li:before {
+  content: "•";
+  @apply absolute left-0 text-blue-400 font-bold;
+}
