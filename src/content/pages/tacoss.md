@@ -451,7 +451,7 @@ TACOSS components are available on GitHub:
 
 For collaboration inquiries or more information about TACOSS deployment:
 - Visit [AkondAstro](/)
-- Contact through [AkondLab](https://www.akond.com)
+- Contact through [GitHub Araucaria Project discussion](https://github.com/orgs/araucaria-project/discussions)
 
 ---
 
