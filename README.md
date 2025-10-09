@@ -53,40 +53,69 @@ npm run dev
 
 ```
 ├── src/
-│   ├── content/           # Markdown content files
-│   │   ├── projects/      # Project descriptions
-│   │   └── partners/      # Partner information
-│   ├── pages/            # Route pages
-│   │   └── index.astro   # Homepage
-│   ├── styles/           # Global styles
-│   └── content.config.ts # Content collections schema
+│   ├── content/              # Markdown content files
+│   │   ├── projects/         # Project descriptions (homepage cards)
+│   │   ├── partners/         # Partner information (homepage)
+│   │   └── pages/            # Full content pages (e.g., TACOSS)
+│   ├── pages/               # Route pages
+│   │   ├── index.astro      # Homepage
+│   │   └── [...slug].astro  # Dynamic routing for content pages
+│   ├── styles/              # Global styles
+│   └── content.config.ts    # Content collections schema
 ├── public/
 │   └── assets/
-│       └── logos/        # Logo assets
-│           ├── brand/    # AkondAstro branding
-│           ├── projects/ # Project logos
-│           └── partners/ # Partner logos
+│       ├── logos/           # Logo assets
+│       │   ├── brand/       # AkondAstro branding
+│       │   ├── projects/    # Project logos
+│       │   └── partners/    # Partner logos
+│       └── images/          # Content images
+│           └── tacoss/      # TACOSS page images
 ├── .github/
-│   └── workflows/        # GitHub Actions
-└── astro.config.mjs     # Astro configuration
+│   └── workflows/           # GitHub Actions
+└── astro.config.mjs        # Astro configuration
 ```
 
 ## ✏️ Content Management
 
 Content is managed through Markdown files with frontmatter:
 
-### Adding/Editing Projects
+### Adding/Editing Projects (Homepage Cards)
 Edit files in `src/content/projects/`:
 
 ```yaml
 ---
 title: "Project Name"
-logo: "/web-akondastro/assets/logos/projects/logo.svg"
-url: "https://project-url.com"
+logo: "/assets/logos/projects/logo.svg"
+url: "/project-slug"  # Internal link for detail pages
+# OR
+url: "https://external-site.com"  # External link
 order: 1
 ---
 
-Project description in Markdown.
+Short project description in Markdown (shown on homepage).
+```
+
+**Internal vs External Links:**
+- URLs starting with `/` create internal links to detail pages (e.g., `/tacoss`)
+- Full URLs create external links to other websites
+
+### Creating Detail Pages
+Create comprehensive pages in `src/content/pages/`:
+
+```yaml
+---
+title: "Project Name"
+description: "SEO description"
+logo: "/assets/logos/projects/logo.svg"
+externalUrl: "https://github.com/org/repo"  # optional
+---
+
+Full project description with images:
+
+![Image Alt Text](/assets/images/project/image.png)
+
+## Section Title
+Content...
 ```
 
 ### Adding/Editing Partners
@@ -96,11 +125,27 @@ Edit files in `src/content/partners/`:
 ---
 title: "Organization Name"
 subtitle: "Location/Affiliation"
-logo: "/web-akondastro/assets/logos/partners/logo.svg"
+logo: "/assets/logos/partners/logo.svg"
 url: "https://organization-url.com"
 filter: "invert"  # optional CSS filter
 order: 1
 ---
+```
+
+### Adding Images
+Place images in `public/assets/images/`:
+
+```bash
+public/assets/images/
+└── tacoss/              # Project-specific folder
+    ├── banner.png       # Hero images
+    ├── screenshot.png   # UI screenshots
+    └── diagram.svg      # Architecture diagrams
+```
+
+Reference in Markdown:
+```markdown
+![Alt text](/assets/images/tacoss/banner.png)
 ```
 
 ## 🎨 Brand Assets
@@ -125,20 +170,25 @@ npm run build
 # Upload dist/ folder to your hosting provider
 ```
 
-## 🔗 Related Projects
+## 🔗 Featured Projects
 
-- [OCM Observatory](https://ocm.camk.edu.pl) - Optical Gravitational Lensing Experiment
-- [Araucaria Project](https://araucaria.camk.edu.pl) - Observatory management systems
-- [BHTom Platform](https://bh-tom2.astrolabs.pl) - Black Hole Transient Monitor
-- [AkondLab](https://www.akond.com) - Parent company
+- **[TACOSS](/tacoss)** - Telescope Automation, Control, and Operation Software Suite
+  - Open-source observatory control platform
+  - Currently operational at OCM Observatory, Chile
+  - [GitHub Organization](https://github.com/araucaria-project)
+- **[BHTom Platform](https://bh-tom2.astrolabs.pl)** - Black Hole Transient Monitor
+- **[OCM Observatory](https://ocm.camk.edu.pl)** - Chile-based astronomical facility
+- **[AkondLab](https://www.akond.com)** - Parent company
 
 ## 🤝 Partnerships
 
 We collaborate with leading astronomical institutions:
-- Nicolaus Copernicus Astronomical Center (CAMK PAN)
-- Astronomical Observatory, University of Warsaw
-- National Centre for Nuclear Research (NCBJ)
-- ASA Astrosysteme GmbH
+- **[CAMK PAN](https://camk.edu.pl)** - Nicolaus Copernicus Astronomical Center, Polish Academy of Sciences
+- **[Araucaria Group](https://araucaria.camk.edu.pl)** - Active astronomical research team
+- **[OCM Observatory](https://ocm.camk.edu.pl)** - Chile-based testing and deployment facility
+- **Astronomical Observatory, University of Warsaw**
+- **National Centre for Nuclear Research (NCBJ)**
+- **ASA Astrosysteme GmbH** - Austria
 
 ## 📄 License
 

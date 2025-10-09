@@ -21,10 +21,10 @@ TACOSS is a collaborative effort bringing together expertise from:
 - **[OCM Observatory](https://ocm.camk.edu.pl)** - Testing and deployment facility in Chile, operated by the Araucaria Group
 
 **Core Development Team (MMME Software Team):**
-- Marek Górski
-- Mikołaj Kałuszyński
-- Mirosław Kicia
-- Ernest Lasek
+- [Marek Górski](https://github.com/astromg)
+- [Mikołaj Kałuszyński](https://github.com/majkelx)
+- [Mirosław Kicia](https://github.com/MMiirrkk)
+- [Ernest Lasek](https://github.com/ernestworkspace)
 
 **Contributing Team Members:**
 - Piotr Wielgórski
