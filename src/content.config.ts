@@ -11,7 +11,7 @@ const projects = defineCollection({
 });
 
 const partners = defineCollection({
-  type: 'content', 
+  type: 'content',
   schema: z.object({
     title: z.string(),
     subtitle: z.string(),
@@ -22,7 +22,18 @@ const partners = defineCollection({
   }),
 });
 
+const pages = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    logo: z.string().optional(),
+    externalUrl: z.string().optional(),
+  }),
+});
+
 export const collections = {
   projects,
   partners,
+  pages,
 };
