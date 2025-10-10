@@ -28,7 +28,7 @@ TACOSS is a collaborative effort bringing together expertise from:
 
 **Contributing Team Members:**
 - Piotr Wielgórski
-- Paulina Kaczmarek
+- Paulina Karczmarek
 - Piotr Żuk
 - Bartłomiej Matuszkiewicz
 - Dawid Chamal
