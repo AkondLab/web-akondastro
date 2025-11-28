@@ -17,8 +17,9 @@ TACOSS is a collaborative effort bringing together expertise from:
 
 **Institutions:**
 - **[CAMK PAN](https://camk.edu.pl)** (Nicolaus Copernicus Astronomical Center, Polish Academy of Sciences) - Primary research partner
-- **[Araucaria Group](https://araucaria.camk.edu.pl)** - Active astronomical research team within CAMK
 - **[OCM Observatory](https://ocm.camk.edu.pl)** - Testing and deployment facility in Chile, operated by the Araucaria Group
+- **[///AkondLab](http://akond.space)** - Software engineering and project management partner
+- **[Araucaria Group](https://araucaria.camk.edu.pl)** - Active astronomical research team within CAMK
 
 **Core Development Team (MMME Software Team):**
 - [Marek Górski](https://github.com/astromg)
